@@ -1,11 +1,6 @@
 import styled from "styled-components"
 
 export const Container = styled.header`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
     height: 114px;
 
     display: flex;
@@ -29,6 +24,11 @@ export const Container = styled.header`
         display: none;
     }
 
+    > .list-button{
+        background: transparent;
+        border: none;
+    }
+
     > .receipt{
         width: 32px;
         height: 32px;
@@ -45,6 +45,11 @@ export const Container = styled.header`
 
     > .recibo-wrapper{
         position: relative;
+
+        button{
+            border: none;
+            background: transparent;
+        }
 
         .num-requests{
             position: absolute;
@@ -90,13 +95,16 @@ export const Container = styled.header`
 
         > .signout-button{
             display: block;
+
+            border: none;
+            background: transparent;
         }
         
         > .recibo-wrapper{
             display: none;
         }
 
-        > .list{
+        > .list-button{
             display: none;
         }
 

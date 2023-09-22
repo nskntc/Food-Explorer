@@ -12,7 +12,7 @@ export const Container = styled.div`
     }
 
     > p{
-        color: ${({ theme }) => theme.COLORS.CAKE_200};
+        color: ${({ theme }) => theme.COLORS.CAKE_100};
     }
 
     > .hidden{
