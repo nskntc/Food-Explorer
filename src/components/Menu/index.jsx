@@ -4,7 +4,7 @@ import { Container } from "./styles"
 
 import { InputSearch } from "../InputSearch"
 
-export const Menu = ({active, ...rest}) => {
+export const Menu = ({isAdmin = false, active, ...rest}) => {
     const handleCloseMenu = () => {
         active(false)
     }
@@ -22,6 +22,9 @@ export const Menu = ({active, ...rest}) => {
             <main>
                 <InputSearch />
 
+                <button type="button" className={isAdmin ? "" : "hidden"}>
+                    <span>Novo Prato</span>
+                </button>
                 <button type="button">
                     <span>Sair</span>
                 </button>

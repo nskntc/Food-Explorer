@@ -72,6 +72,10 @@ export const Container = styled.div`
 
             border-bottom: 1px solid ${({theme}) => theme.COLORS.DARK_1000};
         }
+        
+        .hidden{
+            display: none;
+        }
     }
 
     @keyframes showMenu {
