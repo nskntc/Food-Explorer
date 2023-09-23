@@ -24,6 +24,10 @@ export const Container = styled.footer`
         color: ${({theme}) => theme.COLORS.LIGHT_200};
     }
 
+    @media (max-height: 850px){
+        height: 50px;
+    }
+
     @media (min-width: 1200px){
         padding: 24px 123px;
 

@@ -10,7 +10,7 @@ import { InputSearch } from "../InputSearch";
 import { Menu } from "../Menu";
 
 
-export const Header = () => {
+export const Header = ({$isadmin, ...rest}) => {
     const [isVisible, setIsVisible] = useState(false)
 
     const handleShowMenu = () => {
@@ -18,12 +18,12 @@ export const Header = () => {
     }
 
     return(
-        <Container>
+        <Container $isadmin={$isadmin} {...rest}>
             <button type="button" className="list-button" onClick={handleShowMenu} >
                 {<img src={List} alt="Icone de menu" className="list"/>}
             </button>
 
-            <Logo className="logo" />
+            <Logo className="logo" $isadmin={$isadmin} />
 
             <InputSearch className="input-search" />
 
@@ -37,13 +37,13 @@ export const Header = () => {
             </button>
 
             <div className="recibo-wrapper">
-                <button type="button">
+                <button type="button" className={$isadmin === "true" ? "hidden" : "visible"} >
                     {<img src={Receipt} alt="Icone de recibo" className="receipt"/>}
                     <div className="num-requests">0</div>
                 </button>
             </div>
 
-            {isVisible && <Menu active={setIsVisible} />}
+            {isVisible && <Menu active={setIsVisible} $isadmin={$isadmin} />}
         </Container>
     )
 }

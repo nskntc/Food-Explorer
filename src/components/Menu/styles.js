@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
     position: fixed;
     top: 0;
-    left: ${props => props.isVisible ? '0' : '-100%'};
+    left: ${props => props.$isvisible ? '0' : '-100%'};
 
     width: 100%;
     height: 100%;
@@ -11,6 +11,10 @@ export const Container = styled.div`
     animation: showMenu .4s;
 
     background-color: ${({theme}) => theme.COLORS.DARK_400};
+
+    > footer{
+        position: fixed;
+    }
 
     > header{
         height: 114px;

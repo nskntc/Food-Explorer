@@ -3,14 +3,15 @@ import { AiOutlineClose } from "react-icons/ai"
 import { Container } from "./styles"
 
 import { InputSearch } from "../InputSearch"
+import { Footer } from "../Footer"
 
-export const Menu = ({isAdmin = false, active, ...rest}) => {
+export const Menu = ({$isadmin, active, ...rest}) => {
     const handleCloseMenu = () => {
         active(false)
     }
 
     return(
-        <Container isVisible={active} {...rest}>
+        <Container $isvisible={active.toString()} {...rest}>
             <header>
                 <button type="button" onClick={handleCloseMenu} >
                     <AiOutlineClose size={25} fill="white" />
@@ -22,13 +23,15 @@ export const Menu = ({isAdmin = false, active, ...rest}) => {
             <main>
                 <InputSearch />
 
-                <button type="button" className={isAdmin ? "" : "hidden"}>
+                <button type="button" className={$isadmin === "true" ? "" : "hidden"}>
                     <span>Novo Prato</span>
                 </button>
                 <button type="button">
                     <span>Sair</span>
                 </button>
             </main>
+
+            <Footer />
         </Container>
     )
 }

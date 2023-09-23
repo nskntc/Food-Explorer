@@ -74,6 +74,10 @@ export const Container = styled.header`
             font-weight: 500;
             color: ${({theme}) => theme.COLORS.LIGHT_100};
         }
+
+        .hidden{
+            display: none;
+        }
     }
 
     @media (min-width: 1200px) {
