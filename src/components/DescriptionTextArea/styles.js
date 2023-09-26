@@ -39,4 +39,9 @@ export const Container = styled.div`
         border: 1px solid ${({theme}) => theme.COLORS.LIGHT_100};
         transition: opacity .2s ease;
     }
+
+    > textarea:focus::placeholder {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
 `
