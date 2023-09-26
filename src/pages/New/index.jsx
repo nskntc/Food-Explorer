@@ -19,16 +19,18 @@ export const New = () => {
             <Content>
                 <BackButton className="back-button" />
 
+                <h1>Adicionar prato</h1>
+
                 <Form>
-                    <h1>Novo prato</h1>
+                    <UploadInput id="upload-input" />
 
-                    <UploadInput />
+                    <div className="nome-wrapper">
+                        <Input id="Nome" type="text" placeholder="Ex: Salada Ceasar"  />
+                    </div>
 
-                    <Input id="Nome" type="text" placeholder="Ex: Salada Ceasar" />
+                    <CategorySelect id="category-select" />
 
-                    <CategorySelect />
-
-                    <Ingredients>
+                    <Ingredients id="ingredients">
                         <IngredientItem
                             value="Pão naan"
                         />
@@ -39,10 +41,13 @@ export const New = () => {
                         />
                     </Ingredients>
 
-                    <Input id="Preço" type="text" placeholder="R$ 0,00" />
+                    <div className="preco-wrapper">
+                        <Input id="Preço" type="text" placeholder="R$ 0,00" />
+                    </div>
 
                     <DescriptionTextArea 
                         placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+                        id="description"
                     />
 
                     <Button title="Salvar Alterações" className="save-button" />

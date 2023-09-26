@@ -2,9 +2,9 @@ import { Container } from "./styles"
 
 import { PiUploadSimpleBold } from "react-icons/pi"
 
-export const UploadInput = () => {
+export const UploadInput = ({...rest}) => {
     return(
-        <Container>
+        <Container {...rest} >
             <span>Imagem do prato</span>
             <div className="dishe-img-input">
                 <label htmlFor="dishe-upload">

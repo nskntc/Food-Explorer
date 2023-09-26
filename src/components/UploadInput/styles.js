@@ -52,6 +52,9 @@ export const Container = styled.div`
                 line-height: 24px;
 
                 color: ${({theme}) => theme.COLORS.LIGHT_100};
+
+                display: inline;
+                white-space: nowrap;
             }
         }
     }

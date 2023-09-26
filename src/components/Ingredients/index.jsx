@@ -1,8 +1,8 @@
 import { Container } from "./styles"
 
-export const Ingredients = ({ children }) => {
+export const Ingredients = ({ children, ...rest }) => {
     return(
-        <Container>
+        <Container {...rest} >
             <span>Ingredientes</span>
             <div className="content">
                 {children}

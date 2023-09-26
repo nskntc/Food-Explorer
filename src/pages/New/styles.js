@@ -6,6 +6,8 @@ export const Container = styled.div`
     "header"
     "content"
     "footer";
+
+    min-height: 100vh;
 `
 
 export const Content = styled.div`
@@ -29,6 +31,40 @@ export const Content = styled.div`
             height: 23px;
         }
     }
+
+    > h1{
+        font-family: "Poppins", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+    }
+    
+    @media (min-width: 1200px){
+        padding: 40px 125px 116px 125px;
+
+        > .back-button{
+            margin-bottom: 24px;
+
+            > a{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 140%; /* 33.6px */
+            }
+
+            svg{
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        > h1{ 
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 140%; /* 44.8px */
+
+            margin-bottom: 32px;
+        }
+    }
 `
 
 export const Form = styled.form`
@@ -38,14 +74,15 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 24px; 
 
-    > h1{
-        font-family: "Poppins", sans-serif;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-    }  
+    .nome-wrapper{
+        width: 100%;
+    }
+
+    .preco-wrapper{
+        width: 100%;
+    }
     
     input{
         background-color: ${({theme}) => theme.COLORS.DARK_800};
@@ -55,5 +92,51 @@ export const Form = styled.form`
         background-color: ${({theme}) => theme.COLORS.TOMATO_400};
 
         color: ${({theme}) => theme.COLORS.LIGHT_100};
+    }
+
+    @media (min-width: 1200px){
+
+        display: grid;
+        grid-template-columns: 229px repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "upload-input Nome Nome category-select category-select"
+        "ingredients ingredients ingredients ingredients Preço"
+        "description description description description description"
+        "description description description description description"
+        "none none none none save-button";
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 32px;
+
+        > #upload-input{
+            grid-area: upload-input;
+        }
+
+        > .nome-wrapper{
+            grid-area: Nome;
+        }
+
+        > #category-select{
+            grid-area: category-select;
+        }
+
+        > #ingredients{
+            grid-area: ingredients;
+        }
+
+        > .preco-wrapper{
+            grid-area: Preço;
+        }
+
+        > #description{
+            grid-area: description;
+        }
+
+        > .save-button{
+            grid-area: save-button;
+        }
     }
 `

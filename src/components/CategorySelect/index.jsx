@@ -2,9 +2,9 @@ import { BsChevronDown } from "react-icons/bs"
 
 import { Container } from "./styles"
 
-export const CategorySelect = () => {
+export const CategorySelect = ({...rest}) => {
     return(
-        <Container>
+        <Container {...rest} >
             <label htmlFor="category">Categoria</label>
 
             <div className="select-wrapper">

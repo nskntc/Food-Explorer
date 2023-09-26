@@ -18,7 +18,7 @@ export const Container = styled.div`
         width: 100%;
         height: 172px;
 
-        resize: vertical;
+        resize: none;
 
         background-color: ${({theme}) => theme.COLORS.DARK_800};
 
