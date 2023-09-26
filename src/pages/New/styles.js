@@ -1,10 +1,16 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
 `
 
 export const Content = styled.div`
+    grid-area: content;
+
     padding: 10px 32px 54px 32px;
 
     > .back-button{
@@ -43,5 +49,11 @@ export const Form = styled.form`
     
     input{
         background-color: ${({theme}) => theme.COLORS.DARK_800};
+    }
+
+    > .save-button{
+        background-color: ${({theme}) => theme.COLORS.TOMATO_400};
+
+        color: ${({theme}) => theme.COLORS.LIGHT_100};
     }
 `

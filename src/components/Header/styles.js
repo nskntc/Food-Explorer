@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.header`
-    height: 114px;
+    grid-area: header;
 
     display: flex;
     align-items: center;
@@ -21,6 +21,10 @@ export const Container = styled.header`
     }
 
     > .signout-button{
+        display: none;
+    }
+
+    > .new-request{
         display: none;
     }
 
@@ -75,9 +79,13 @@ export const Container = styled.header`
             color: ${({theme}) => theme.COLORS.LIGHT_100};
         }
 
-        .hidden{
+        > .hidden{
             display: none;
         }
+    }
+
+    > .hidden{
+        display: none;
     }
 
     @media (min-width: 1200px) {
@@ -88,12 +96,21 @@ export const Container = styled.header`
             width: 50%;
         }
 
+        > .new-request{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 48px;
+            width: 20%;
+        }
+
         > .header-button{
             display: flex;
             align-items: center;
             justify-content: center;
 
-            height: 56px;
+            height: 48px;
             width: 20%;
         }
 
@@ -110,6 +127,10 @@ export const Container = styled.header`
 
         > .list-button{
             display: none;
+        }
+
+        .hidden{
+            display: none !important;
         }
 
     }
@@ -133,4 +154,8 @@ export const Button = styled.button`
 
     border: none;
     border-radius: 5px;
+
+    > .hidden{
+        display: none;
+    }
 `

@@ -1,13 +1,9 @@
 import styled from "styled-components"
 
 export const Container = styled.footer`
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    grid-area: footer;
 
     width: 100%;
-    height: 77px;
 
     display: flex;
     align-items: center;
@@ -18,14 +14,10 @@ export const Container = styled.footer`
     background-color: ${({theme}) => theme.COLORS.DARK_700};
 
     > p{
-        font-family: DM Sans;
+        font-family: "DM Sans", sans-serif;
         font-size: 12px;
         font-weight: 400;
         color: ${({theme}) => theme.COLORS.LIGHT_200};
-    }
-
-    @media (max-height: 850px){
-        height: 50px;
     }
 
     @media (min-width: 1200px){

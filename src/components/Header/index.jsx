@@ -27,9 +27,13 @@ export const Header = ({$isadmin, ...rest}) => {
 
             <InputSearch className="input-search" />
 
-            <Button className="header-button">
+            <Button className={$isadmin === "true" ? "hidden" : "header-button"}>
                 {<img src={Receipt} alt="Icone de recibo" className="receipt"/>}
                 Pedidos (0)
+            </Button>
+
+            <Button className={$isadmin === "true" ? "new-request" : "hidden"}>
+                Novo Prato
             </Button>
 
             <button type="button" className="signout-button" >

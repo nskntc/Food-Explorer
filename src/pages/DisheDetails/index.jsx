@@ -12,7 +12,7 @@ import { Button } from "../../components/Button";
 import Ravanelo from "../../assets/Ravanelo.png"
 
 export const DisheDetails = () => {
-    let $isadmin = "false"
+    let $isadmin = "true"
 
     return(
         <Container>
