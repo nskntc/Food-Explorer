@@ -69,12 +69,18 @@ export const Form = styled.form`
         border-radius: 16px;
 
         > h1{
-            display: block;
+            display: inline;
+            white-space: nowrap;
 
             font-family:"Poppins", sans-serif;
             font-size: 32px;
             font-weight: 500;
             color: ${({theme}) => theme.COLORS.LIGHT_100};
+        }
+
+        > a{
+            display: inline;
+            white-space: nowrap;
         }
     }
 `
