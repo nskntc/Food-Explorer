@@ -1,10 +1,12 @@
-import { PiUploadSimpleBold } from "react-icons/pi"
-
-import { Container, Content, Form, UploadInput } from "./styles"
+import { Container, Content, Form } from "./styles"
 
 import { Header } from "../../components/Header"
 import { BackButton } from "../../components/BackButton"
 import { Input } from "../../components/Input"
+import { UploadInput } from "../../components/UploadInput"
+import { CategorySelect } from "../../components/CategorySelect"
+import { Ingredients } from "../../components/Ingredients"
+import { IngredientItem } from "../../components/IngredientItem"
 
 export const New = () => {
     return(
@@ -17,18 +19,22 @@ export const New = () => {
                 <Form>
                     <h1>Novo prato</h1>
 
-                    <UploadInput>
-                        <span>Imagem do prato</span>
-                        <div className="dishe-img-input">
-                            <label htmlFor="dishe-upload">
-                                <PiUploadSimpleBold size={24} fill="white" />
-                                
-                                <span>Selecione Imagem</span>
+                    <UploadInput />
 
-                                <input type="file" id="dishe-upload" />
-                            </label>
-                        </div>
-                    </UploadInput>
+                    <Input id="Nome" type="text" placeholder="Ex: Salada Ceasar" />
+
+                    <CategorySelect />
+
+                    <Ingredients>
+                        <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            placeholder="Adicionar"
+                            $isnew="true"
+                        />
+                    </Ingredients>
                 </Form>
             </Content>
         </Container>
