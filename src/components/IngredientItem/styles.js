@@ -46,7 +46,7 @@ export const Container = styled.div`
         padding: 10px 16px;
 
         color: ${({ theme }) => theme.COLORS.LIGHT_100};
-        background: transparent;
+        background: transparent !important;
 
         border: none;
         

@@ -22,7 +22,7 @@ export const New = () => {
                 <h1>Adicionar prato</h1>
 
                 <Form>
-                    <UploadInput id="upload-input" />
+                    <UploadInput id="upload-input" title="Selecione imagem" />
 
                     <div className="nome-wrapper">
                         <Input id="Nome" type="text" placeholder="Ex: Salada Ceasar"  />
