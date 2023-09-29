@@ -36,6 +36,46 @@ export const New = () => {
                         />
 
                         <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            value="Pão naan"
+                        />
+
+                        <IngredientItem
+                            placeholder="Adicionar"
+                            $isnew="true"
+                        />
+
+<IngredientItem
+                            placeholder="Adicionar"
+                            $isnew="true"
+                        />
+
+<IngredientItem
+                            placeholder="Adicionar"
+                            $isnew="true"
+                        />
+
+<IngredientItem
+                            placeholder="Adicionar"
+                            $isnew="true"
+                        />
+
+<IngredientItem
                             placeholder="Adicionar"
                             $isnew="true"
                         />

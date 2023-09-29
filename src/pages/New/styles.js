@@ -125,6 +125,7 @@ export const Form = styled.form`
 
         > #ingredients{
             grid-area: ingredients;
+            width: 100%;
         }
 
         > .preco-wrapper{

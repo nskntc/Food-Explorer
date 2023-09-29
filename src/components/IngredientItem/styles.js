@@ -17,13 +17,15 @@ export const Container = styled.div`
     border-radius: 8px;
     padding-right: 16px;
 
-    overflow: scroll;
+    overflow-x: auto;
     white-space: nowrap;
 
     > button { 
         display: flex;
         border: none;
         background: transparent;
+
+        overflow: hidden;
     }
 
     .button-delete {
@@ -47,7 +49,9 @@ export const Container = styled.div`
         background: transparent;
 
         border: none;
-        /* border: 1px solid white; */
+        
+
+        /* overflow: hidden; */
 
         &::placeholder {
             color: ${({ theme }) => theme.COLORS.LIGHT_500};

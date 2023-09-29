@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    width: 100%;
+    width: calc(100vw - 64px);
 
     display: flex;
     flex-direction: column;
     gap: 16px;
 
+    /* border: 1px solid white; */
+    
     > span{
         font-size: 16px;
         font-weight: 400;
@@ -19,8 +21,24 @@ export const Container = styled.div`
         justify-content: flex-start;
         gap: 16px;
 
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            width: 100px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: ${({theme}) => theme.COLORS.LIGHT_700};
+            border-radius: 20px;
+            border: none;
+        }
 
         height: 48px;
 
