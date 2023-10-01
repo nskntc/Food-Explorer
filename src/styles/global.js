@@ -12,6 +12,8 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.COLORS.LIGHT_300};
 
         -webkit-font-smoothing: antialiased;
+
+        min-height: 100vh;
     }
 
     body, input, button, textarea {
