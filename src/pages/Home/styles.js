@@ -50,5 +50,43 @@ export const Container = styled.div`
                 height: 149px;
             }
         }
+
+        .section{
+            padding: 0 24px;
+
+            h1{
+                font-family: "Poppins", sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+
+                margin-bottom: 23px;
+            }
+
+            .mySwiper{
+                .swiper-button-prev, .swiper-button-next{
+                    color: white;
+                }
+            }
+
+            .swiper {
+                width: calc(100vw - 48px);
+                height: 292px;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: transparent;
+
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 210px;
+            }
+        }
     }
 `
