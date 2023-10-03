@@ -114,7 +114,7 @@ export const Container = styled.div`
 
             .decoration{
                 /* margin: 164px 123px 63px 123px; */
-                margin-top: 114px;
+                margin-top: 32px;
                 margin-bottom: 63px;
                 padding: 88px 100px 88px 593px;
 
