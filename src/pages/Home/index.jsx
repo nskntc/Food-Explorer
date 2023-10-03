@@ -27,8 +27,6 @@ export const Home = () => {
                     <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                 </div>
 
-                {/* <Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /> */}
-
                 <div className="section">
                     <h1>Refeições</h1>
 
@@ -37,13 +35,67 @@ export const Home = () => {
                         modules={[Navigation]}
                         className="mySwiper"
                         slidesPerView="auto"
-                        spaceBetween={32}
+                        spaceBetween={16}
                         centeredSlides={true}
                     >
+                        <div className="shadow-1"></div>
+                        <div className="shadow-2"></div>
                         <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
                         <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
                         <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
                         <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                    </Swiper>
+                </div>
+
+                <div className="section">
+                    <h1>Sobremesas</h1>
+
+                    <Swiper
+                        navigation={true}
+                        modules={[Navigation]}
+                        className="mySwiper"
+                        slidesPerView="auto"
+                        spaceBetween={16}
+                        centeredSlides={true}
+                    >
+                        <div className="shadow-1"></div>
+                        <div className="shadow-2"></div>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>                    
+                    </Swiper>
+                </div>
+
+                <div className="section">
+                    <h1>Bebidas</h1>
+
+                    <Swiper
+                        navigation={true}
+                        modules={[Navigation]}
+                        className="mySwiper"
+                        slidesPerView="auto"
+                        spaceBetween={16}
+                        centeredSlides={true}
+                    >
+                        <div className="shadow-1"></div>
+                        <div className="shadow-2"></div>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>
+                        <SwiperSlide><Card title="Salada Ravanelo" price="49,97" src={Ravanelo} $isadmin={$isadmin} /></SwiperSlide>                    
                     </Swiper>
                 </div>
             </main>

@@ -7,7 +7,7 @@ import { Button } from "../Button"
 
 export const Card = ({src, price, title, $isadmin, ...rest}) => {
     return(
-        <Container {...rest}>
+        <Container className="card" {...rest}>
             <button 
                 type="button" 
                 className="top-button"
@@ -21,13 +21,15 @@ export const Card = ({src, price, title, $isadmin, ...rest}) => {
 
             <span className="price" >R$ {price}</span>
 
-            <div className={$isadmin === "true" ? "hidden" : "quantity-selector"}>
-                <button type="button" className="plus-minus"><AiOutlineMinus fill="white" size={24} /></button>
-                <span>01</span>
-                <button type="button" className="plus-minus"><AiOutlinePlus fill="white" size={24} /></button>
-            </div>
+            <div className="buttons">
+                <div className={$isadmin === "true" ? "hidden" : "quantity-selector"}>
+                    <button type="button" className="plus-minus"><AiOutlineMinus fill="white" size={24} /></button>
+                    <span>01</span>
+                    <button type="button" className="plus-minus"><AiOutlinePlus fill="white" size={24} /></button>
+                </div>
 
-            {$isadmin === "true" || <Button title="incluir" />}
+                {$isadmin === "true" || <Button title="incluir" />}
+            </div>
         </Container>
     )
 }

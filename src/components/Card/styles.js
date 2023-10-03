@@ -41,6 +41,9 @@ export const Container = styled.div`
         font-style: normal;
         font-weight: 500;
         line-height: 24px; /* 171.429% */
+
+        display: inline;
+        white-space: nowrap;
     }
 
     > .price{
@@ -52,22 +55,30 @@ export const Container = styled.div`
         color: ${({theme}) => theme.COLORS.CAKE_100};
     }
 
-    .quantity-selector{
+    .buttons{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 14px;
+        gap: 12px;
 
-        .plus-minus{
-            background: transparent;
-            border: none;
-        }
+        .quantity-selector{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
 
-        span{
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 100%; /* 16px */
+            .plus-minus{
+                background: transparent;
+                border: none;
+            }
+
+            span{
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 16px */
+            }
         }
     }
 
