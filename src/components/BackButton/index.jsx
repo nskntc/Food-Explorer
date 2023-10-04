@@ -1,14 +1,15 @@
 import { IoIosArrowBack } from "react-icons/io"
+import { Link } from "react-router-dom"
 
 import { Container } from "./styles"
 
 export const BackButton = ({...rest}) => {
     return(
         <Container {...rest}>
-            <a href="#">
+            <Link to="/">
                 <IoIosArrowBack fill="white" size={32} />
                 voltar
-            </a>
+            </Link>
         </Container>
     )
 }

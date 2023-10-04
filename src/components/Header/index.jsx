@@ -1,5 +1,6 @@
 import { GoSignOut } from "react-icons/go"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Receipt from "../../assets/Receipt.svg"
 import List from "../../assets/List.svg"
@@ -13,8 +14,14 @@ import { Menu } from "../Menu";
 export const Header = ({$isadmin, ...rest}) => {
     const [isVisible, setIsVisible] = useState(false)
 
+    const navigate = useNavigate()
+
     const handleShowMenu = () => {
         setIsVisible(!isVisible);
+    }
+
+    const handleToNew = () => {
+        navigate('/new')
     }
 
     return(
@@ -32,7 +39,7 @@ export const Header = ({$isadmin, ...rest}) => {
                 Pedidos (0)
             </Button>
 
-            <Button className={$isadmin === "true" ? "new-request" : "hidden"}>
+            <Button className={$isadmin === "true" ? "new-request" : "hidden"} onClick={handleToNew} >
                 Novo Prato
             </Button>
 

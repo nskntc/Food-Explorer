@@ -10,6 +10,7 @@ export const Container = styled.div`
     > .logo{
         margin-bottom: 71px;
     }
+
     @media (min-width: 1200px) {
         width: 100%;
 
@@ -62,9 +63,10 @@ export const Form = styled.form`
         background-color: ${({theme}) => theme.COLORS.DARK_700};
 
         width: 476px;
-        height: 540px;
+        height: 75%;
 
         padding: 64px;
+       
 
         border-radius: 16px;
 

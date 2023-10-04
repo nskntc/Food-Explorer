@@ -27,7 +27,7 @@ export const SignIn = () => {
 
                 <Button title="Entrar" />
 
-                <a>Criar uma conta</a>
+                <Link to="/register">Criar uma conta</Link>
             </Form>
         </Container>
     )
