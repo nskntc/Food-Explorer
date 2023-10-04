@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import { PiReceipt } from "react-icons/pi"
 import { AiOutlinePlus } from "react-icons/ai"
 import { AiOutlineMinus } from "react-icons/ai"
@@ -13,6 +15,12 @@ import Ravanelo from "../../assets/Ravanelo.png"
 
 export const DisheDetails = () => {
     let $isadmin = "true"
+
+    const navigate = useNavigate()
+
+    const handleToEdit = () => {
+        navigate("/edit")
+    }
 
     return(
         <Container>
@@ -38,7 +46,7 @@ export const DisheDetails = () => {
                             <li>tomate</li>
                         </ul>
 
-                        <Button title="Editar prato" className={$isadmin === "true" || "hidden"} />
+                        <Button title="Editar prato" className={$isadmin === "true" || "hidden"} onClick={handleToEdit} />
 
                         <div className={$isadmin === "true" ? "hidden" : "request-wrapper"}>
                             <button type="button" className="plus-minus"><AiOutlineMinus fill="white" size={27} /></button>

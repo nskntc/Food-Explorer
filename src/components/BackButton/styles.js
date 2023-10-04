@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    > a{
+    > button{
         width: 100%;
 
         text-align: left;
@@ -17,5 +17,8 @@ export const Container = styled.div`
         justify-content: flex-start;
 
         color: ${({theme}) => theme.COLORS.LIGHT_300};
+
+        background: transparent;
+        border: none;
     }
 `
