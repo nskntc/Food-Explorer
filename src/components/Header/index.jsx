@@ -10,11 +10,18 @@ import { Logo } from "../../components/Logo"
 import { InputSearch } from "../InputSearch";
 import { Menu } from "../Menu";
 
+import { useAuth } from "../../hooks/auth";
+
 
 export const Header = ({$isadmin, ...rest}) => {
     const [isVisible, setIsVisible] = useState(false)
-
+    
+    const { signOut } = useAuth()
     const navigate = useNavigate()
+
+    const handleSignOut = () => {
+        signOut()
+    }
 
     const handleShowMenu = () => {
         setIsVisible(!isVisible);
@@ -43,7 +50,7 @@ export const Header = ({$isadmin, ...rest}) => {
                 Novo Prato
             </Button>
 
-            <button type="button" className="signout-button" >
+            <button type="button" className="signout-button" onClick={handleSignOut} >
                 <GoSignOut fill="white" size={32} />
             </button>
 

@@ -6,8 +6,15 @@ import { Container } from "./styles"
 import { InputSearch } from "../InputSearch"
 import { Footer } from "../Footer"
 
+import { useAuth } from "../../hooks/auth"
+
 export const Menu = ({$isadmin, active, ...rest}) => {
+    const { signOut } = useAuth()
     const navigate = useNavigate()
+
+    const handleSignOut = () => {
+        signOut()
+    }
 
     const handleToNew = () => {
         navigate('/new')
@@ -33,7 +40,7 @@ export const Menu = ({$isadmin, active, ...rest}) => {
                 <button type="button" className={$isadmin === "true" ? "" : "hidden"} onClick={handleToNew} >
                     <span>Novo Prato</span>
                 </button>
-                <button type="button">
+                <button type="button" onClick={handleSignOut}>
                     <span>Sair</span>
                 </button>
             </main>
