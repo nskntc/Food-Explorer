@@ -24,6 +24,8 @@ export const Container = styled.div`
         align-items: center;
         align-self: stretch;
 
+        color: ${({theme}) => theme.COLORS.LIGHT_700};
+
         background-color: ${({theme}) => theme.COLORS.DARK_900};
     }
 
