@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Container, Form } from "./styles";
 import { Link, useNavigate } from "react-router-dom"
+
+import { Container, Form } from "./styles";
 
 import { Input } from "../../components/Input";
 import { Logo } from "../../components/Logo";

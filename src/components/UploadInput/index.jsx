@@ -2,7 +2,7 @@ import { Container } from "./styles"
 
 import { PiUploadSimpleBold } from "react-icons/pi"
 
-export const UploadInput = ({title, ...rest}) => {
+export const UploadInput = ({title, onChange, ...rest}) => {
     return(
         <Container {...rest} >
             <span>Imagem do prato</span>
@@ -12,7 +12,7 @@ export const UploadInput = ({title, ...rest}) => {
                     
                     <span>{title}</span>
 
-                    <input type="file" id="dishe-upload" />
+                    <input type="file" id="dishe-upload" onChange={onChange} />
                 </label>
             </div>
         </Container>
