@@ -21,6 +21,7 @@ export const Header = ({$isadmin, ...rest}) => {
 
     const handleSignOut = () => {
         signOut()
+        navigate("/")
     }
 
     const handleShowMenu = () => {

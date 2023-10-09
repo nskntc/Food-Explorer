@@ -14,6 +14,7 @@ export const Menu = ({$isadmin, active, ...rest}) => {
 
     const handleSignOut = () => {
         signOut()
+        navigate("/")
     }
 
     const handleToNew = () => {

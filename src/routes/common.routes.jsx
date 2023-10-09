@@ -7,7 +7,7 @@ export const CommonRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/details" element={<DisheDetails />} />
+      <Route path="/details/:id" element={<DisheDetails />} />
     </Routes>
   )
 }

@@ -34,7 +34,7 @@ export const New = () => {
 
     const handleAddIngredient = () => {
         setIngredients(prevState => [...prevState, newIngredient]);
-        setNewIngredient("");
+        setNewIngredient("")
     }
 
     const handleRemoveIngredient = (removed) => {
@@ -45,14 +45,14 @@ export const New = () => {
         if(!name || !ingredients || !description || !category || !price || !imgFile) alert("Preencha todos os campos!")
 
         try{
-            const newDishForm = new FormData();
+            const newDishForm = new FormData()
 
-            newDishForm.append("img", imgFile);
-            newDishForm.append("name", name);
-            newDishForm.append("category", category);
-            newDishForm.append("ingredients", ingredients);
-            newDishForm.append("price", price);
-            newDishForm.append("description", description);
+            newDishForm.append("img", imgFile)
+            newDishForm.append("name", name)
+            newDishForm.append("category", category)
+            newDishForm.append("ingredients", ingredients)
+            newDishForm.append("price", price)
+            newDishForm.append("description", description)
             
             await api.post("/dishes", newDishForm)
             alert("Prato criado com sucesso!")
@@ -95,7 +95,7 @@ export const New = () => {
 
                     <Ingredients id="ingredients">
                         {
-                            ingredients.map((ingredient, index) => {
+                            ingredients && ingredients.map((ingredient, index) => {
                                 return(
                                     <IngredientItem
                                         key={String(index)}
