@@ -33,8 +33,6 @@ export const DisheDetails = () => {
     const [price, setPrice] = useState("")
     const [description, setDescription] = useState("")
 
-    const img = `${api.defaults.baseURL}/files/${imgFile}`
-
     const handleToEdit = () => {
         navigate(`/edit/${params.id}`)
     }
@@ -58,6 +56,8 @@ export const DisheDetails = () => {
 
         fetchDish()
     }, [])
+
+    const img = `${api.defaults.baseURL}/files/${imgFile}`
 
     return(
         <Container>

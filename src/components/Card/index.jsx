@@ -8,11 +8,11 @@ import { PiPencilSimple } from "react-icons/pi"
 
 import { Button } from "../Button"
 
-export const Card = ({src, price, title, $isadmin, ...rest}) => {
+export const Card = ({src, price, title, id, $isadmin, ...rest}) => {
     const navigate = useNavigate()
 
     const handleToEdit = () => {
-        navigate(`/edit`)
+        navigate(`/edit/${id}`)
     }
 
     return(
@@ -25,7 +25,7 @@ export const Card = ({src, price, title, $isadmin, ...rest}) => {
                 {$isadmin === "true" ? <PiPencilSimple fill="white" size={24} /> : <AiOutlineHeart fill="white" size={24} />}
             </button>
 
-            <Link to="/details"><img src={src} alt="Imagem do prato" /></Link>
+            <Link to={`/details/${id}`}><img src={src} alt="Imagem do prato" /></Link>
 
             <h2 className="title">{title} &gt;</h2>
 

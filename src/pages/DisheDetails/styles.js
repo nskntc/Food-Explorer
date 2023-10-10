@@ -83,6 +83,23 @@ export const Container = styled.div`
                     border-radius: 5px;
 
                     background-color: ${({theme}) => theme.COLORS.DARK_1000};
+
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        width: 100px;
+                        height: 5px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: ${({theme}) => theme.COLORS.LIGHT_700};
+                        border-radius: 20px;
+                        border: none;
+                    }
                 }
 
                 button{

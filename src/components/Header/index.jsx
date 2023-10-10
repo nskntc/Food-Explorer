@@ -13,7 +13,7 @@ import { Menu } from "../Menu";
 import { useAuth } from "../../hooks/auth";
 
 
-export const Header = ({$isadmin, ...rest}) => {
+export const Header = ({$isadmin, onChange, ...rest}) => {
     const [isVisible, setIsVisible] = useState(false)
     
     const { signOut } = useAuth()
@@ -40,7 +40,7 @@ export const Header = ({$isadmin, ...rest}) => {
 
             <Logo className="logo" $isadmin={$isadmin} />
 
-            <InputSearch className="input-search" />
+            <InputSearch className="input-search" onChange={onChange} />
 
             <Button className={$isadmin === "true" ? "hidden" : "header-button"}>
                 {<img src={Receipt} alt="Icone de recibo" className="receipt"/>}
@@ -62,7 +62,7 @@ export const Header = ({$isadmin, ...rest}) => {
                 </button>
             </div>
 
-            {isVisible && <Menu active={setIsVisible} $isadmin={$isadmin} />}
+            {isVisible && <Menu active={setIsVisible} $isadmin={$isadmin} onChange={onChange} />}
         </Container>
     )
 }

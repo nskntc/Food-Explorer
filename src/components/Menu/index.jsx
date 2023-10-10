@@ -8,7 +8,7 @@ import { Footer } from "../Footer"
 
 import { useAuth } from "../../hooks/auth"
 
-export const Menu = ({$isadmin, active, ...rest}) => {
+export const Menu = ({ $isadmin, active, onChange, ...rest }) => {
     const { signOut } = useAuth()
     const navigate = useNavigate()
 
@@ -36,7 +36,7 @@ export const Menu = ({$isadmin, active, ...rest}) => {
             </header>
 
             <main>
-                <InputSearch />
+                <InputSearch onChange={onChange} />
 
                 <button type="button" className={$isadmin === "true" ? "" : "hidden"} onClick={handleToNew} >
                     <span>Novo Prato</span>
