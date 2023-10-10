@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     background-color: ${({theme}) => theme.COLORS.DARK_200};
 
-    .top-button{
+    > .top-button{
         position: absolute;
         top: 16px;
         right: 16px;
@@ -33,17 +33,23 @@ export const Container = styled.div`
             width: 88px;
             height: 88px;
         }
+
+        .title{
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 171.429% */
+
+            display: inline;
+            white-space: nowrap;
+
+            color: ${({theme}) => theme.COLORS.LIGHT_300};
+        }
     }
 
-    > .title{
-        font-family: "Poppins", sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px; /* 171.429% */
-
-        display: inline;
-        white-space: nowrap;
+    > p{
+        display: none;
     }
 
     > .price{
@@ -55,7 +61,7 @@ export const Container = styled.div`
         color: ${({theme}) => theme.COLORS.CAKE_100};
     }
 
-    .buttons{
+    > .buttons{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,5 +90,17 @@ export const Container = styled.div`
 
     .hidden{
         display: none;
+    }
+
+   @media (min-width: 1200px){
+        > p{
+            display: block;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 160%;
+
+            color: ${({theme}) => theme.COLORS.LIGHT_400};
+        }
     }
 `

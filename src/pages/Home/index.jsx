@@ -68,6 +68,7 @@ export const Home = () => {
                                         <Card 
                                             id={meal.id}
                                             title={meal.name} 
+                                            description={meal.description}
                                             price={Number(meal.price).toFixed(2)} 
                                             src={`${api.defaults.baseURL}/files/${meal.img}`}
                                             $isadmin={$isadmin} 
@@ -102,6 +103,7 @@ export const Home = () => {
                                         <Card 
                                             id={dessert.id}
                                             title={dessert.name} 
+                                            description={dessert.description}
                                             price={Number(dessert.price).toFixed(2)} 
                                             src={`${api.defaults.baseURL}/files/${dessert.img}`}
                                             $isadmin={$isadmin} 
@@ -136,6 +138,7 @@ export const Home = () => {
                                         <Card 
                                             id={drink.id}
                                             title={drink.name} 
+                                            description={drink.description}
                                             price={Number(drink.price).toFixed(2)} 
                                             src={`${api.defaults.baseURL}/files/${drink.img}`}
                                             $isadmin={$isadmin} 

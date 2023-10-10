@@ -8,7 +8,7 @@ import { PiPencilSimple } from "react-icons/pi"
 
 import { Button } from "../Button"
 
-export const Card = ({src, price, title, id, $isadmin, ...rest}) => {
+export const Card = ({src, price, title, description, id, text, $isadmin, ...rest}) => {
     const navigate = useNavigate()
 
     const handleToEdit = () => {
@@ -27,7 +27,9 @@ export const Card = ({src, price, title, id, $isadmin, ...rest}) => {
 
             <Link to={`/details/${id}`}><img src={src} alt="Imagem do prato" /></Link>
 
-            <h2 className="title">{title} &gt;</h2>
+            <Link to={`/details/${id}`}><h2 className="title">{title} &gt;</h2></Link>
+
+            <p>{description}</p>
 
             <span className="price" >R$ {price}</span>
 
