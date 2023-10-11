@@ -36,7 +36,7 @@ export const Home = () => {
 
     return(
         <Container>
-            <Header $isadmin={$isadmin} onChange={e => setSearch(e.target.value)} />
+            <Header $isadmin={$isadmin} onChange={e => setSearch(e.target.value)} value={search} />
 
             <main>
                 <div className="decoration">
