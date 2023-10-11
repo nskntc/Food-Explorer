@@ -65,3 +65,7 @@ Password: admin
 ## Deploy
 
 https://food-explorer-nicolas.netlify.app/
+
+## API repository
+
+https://github.com/nskntc/Food-Explorer-API
