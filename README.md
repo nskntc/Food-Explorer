@@ -62,10 +62,14 @@ To run this project, you can add the following environment variables to your .en
 E-mail: admin@gmail.com
 
 Password: admin
+
 ## Deploy
 
-https://food-explorer-nicolas.netlify.app/
+Frontend: https://food-explorer-nicolas.netlify.app/
+
+Backend: https://food-explorer-api-nicolas.onrender.com
 
 ## API repository
+
 
 https://github.com/nskntc/Food-Explorer-API
