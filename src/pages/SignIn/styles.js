@@ -7,6 +7,8 @@ export const Container = styled.div`
     margin: 0 auto;
     margin-top: 158px;
 
+    animation: scaleOpacityAnimation .7s;
+
     > .logo{
         margin-bottom: 71px;
     }
@@ -75,6 +77,17 @@ export const Form = styled.form`
             font-size: 32px;
             font-weight: 500;
             color: ${({theme}) => theme.COLORS.LIGHT_100};
+        }
+    }
+
+    @keyframes scaleOpacityAnimation {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
         }
     }
 `
